@@ -5,14 +5,15 @@ let resultText = document.querySelector('#result');
 let previousResult = document.querySelector('#previousResult');
 
 function getNumber() {
-    numberInitial = document.querySelector('#initialNumber').value;
     numberFinal = document.querySelector('#finalNumber').value; 
 
-    getRandom(numberInitial, numberFinal);
+    $('.container__initial').addClass('hide');
+
+    getRandom(numberFinal);
 }
 
-function getRandom(min, max) {
-    const randomNumber = Math.floor(Math.random() * (max - min) + min); 
+function getRandom(max) {
+    const randomNumber = Math.floor(Math.floor(Math.random() * max + 1)); 
 
     if(randomNumber === 0) {
         getNumber();
