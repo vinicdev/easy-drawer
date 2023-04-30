@@ -45,9 +45,7 @@ function getPrint(valueFinal) {
     resultText.innerHTML = valueFinal;
     $('.container__textResult').addClass('show');
 
-    let newResult = result.reverse();
-
-    const data = newResult.map((num) => {
+    const data = result.map((num) => {
         return `
             <li>
                 ${num}
