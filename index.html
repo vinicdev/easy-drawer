@@ -11,19 +11,14 @@
 </head>
 
 <body>
-    <div class="container">
+    <section class="container">
         <div class="container__box">
             <h1 class="container__title">Sorteio do culto da família MBON</h1>
 
             <div class="container__form">
                 <div class="container__labelspace">
-                    <label>Primeiro número</label>
-                    <input type="number" id="initialNumber" />
-                </div>
-    
-                <div class="container__labelspace">
-                    <label>Último número</label>
-                    <input type="number" id="finalNumber" />
+                    <label>Último número do sorteio</label>
+                    <input type="number" id="finalNumber" min="1" placeholder="Informe o último do sorteio"/>
                 </div>
             </div>
 
@@ -31,12 +26,40 @@
             <button class="container__button" onclick="getNumber()">Sortear</button>
         </div>
 
+        <section class="container__initial">
+            <h2>
+                BOA SORTE!!
+            </h2>
+
+            <div class="container__warning">
+                <h3>
+                    Como usar 
+                </h3>
+    
+                <ul>
+                    <li>Informe qual o número máximo do seu sorteio na tabela acima.</li>
+                    <li>Não insira números que sejam menores do que zero.</li>
+                    <li>Para sortear diversos números, clique no botão 'Sortear' quantas vezes forem necessárias e obtenha a quantidade de números escolhida.</li>
+                </ul>
+            </div>
+        </section>
+
+
         <p class="container__textResult">Número sorteado:</p>
         <h1 class="container__titleresult" id="result"></h1>
         
         <p class="container__textResult">Últimos Números</p>
         <ul class="container__list" id="previousResult" reverse></ul>
-    </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footer__paragrafo">
+            made with 💜 by 
+            <a href="https://github.com/vinicdev" class="footer__link">
+                &copy; Vinicius Cardoso
+            </a>
+        </p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
     <script src="/assets/js/main.js"></script>

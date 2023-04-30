@@ -30,6 +30,11 @@ body {
 
     &__title {
         margin-bottom: 16px;
+        font-size: clamp(1.25rem, 4vw, 2rem);
+
+        @media(max-width: 520px) {
+            text-align: center;
+        }
     }
 
     &__form {
@@ -38,6 +43,10 @@ body {
         margin-bottom: 16px;
         width: 80%;
         gap: 8px;
+
+        @media(max-width: 520px) {
+            width: 95%;
+        }
     }
 
     &__labelspace {
@@ -54,6 +63,10 @@ body {
             padding-left: 8px;
             color: rgb(206, 202, 196);
         }
+
+        @media(max-width: 520px) {
+            width: 100%;
+        }
     }
 
     &__button {
@@ -62,7 +75,27 @@ body {
         border: none;
         cursor: pointer;
         color: rgb(206, 202, 196);
+    }
 
+    &__initial {
+        h2 {
+            margin-top: 80px;
+            text-align: center;
+            font-size: clamp(3rem, 4vw, 4rem);
+        }
+    }
+
+    &__warning {
+        margin-top: 40px;
+
+        ul {
+            padding: 18px;
+
+            li {
+                padding-top: 5px;
+                text-align: justify;
+            }
+        }
     }
 
     &__textResult {
@@ -86,9 +119,42 @@ body {
         list-style: none;
         overflow-x: auto;
         font-size: 2rem;
+
+        @media(max-width: 520px) {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 520px) {
+        width: 95%;
+    }
+}
+
+.footer {
+    text-align: center;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+
+    &__paragrafo {
+        color: #7a7a7a;
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: 0.6s;
+
+            &:hover {
+                color: #a0a0a0;
+            }
+        }
     }
 }
 
 .show {
     display: block;
+}
+
+.hide {
+    display: none;
 }
