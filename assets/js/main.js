@@ -51,10 +51,10 @@ function verifyNumber(testNumber) {
 }
 
 function getPrint(valueFinal) {
-    resultText.innerHTML = valueFinal;
     $('.container__textResult').addClass('show');
-
-    const data = result.map((num) => {
+    
+    let changingPosition = result.slice(0).reverse();
+    const data = changingPosition.map((num) => {
         return `
             <li>
                 ${num}
@@ -63,5 +63,6 @@ function getPrint(valueFinal) {
     })
     .join(' - ');
 
+    resultText.innerHTML = valueFinal;
     previousResult.innerHTML = data;
 }
