@@ -1,12 +1,11 @@
 let result = [];
-let numberInitial = 0;
-let numberFinal = 0;
+let finalNumber = 0;
 let incrementNumber = 0;
 let resultText = document.querySelector('#result');
 let previousResult = document.querySelector('#previousResult');
 
 function getNumber() {
-    numberFinal = document.querySelector('#finalNumber').value; 
+    finalNumber = document.querySelector('#finalNumber').value; 
     
     $('.container__initial').addClass('hide');
 
@@ -14,7 +13,7 @@ function getNumber() {
         removeContainer();
     }
 
-    getRandom(numberFinal);
+    getRandom(finalNumber);
 }
 
 function removeContainer() {
@@ -24,7 +23,7 @@ function removeContainer() {
 }
 
 function getRandom(max) {
-    const randomNumber = Math.floor(Math.floor(Math.random() * max + 1)); 
+    let randomNumber = Math.floor(Math.random() * max + 1); 
 
     if(randomNumber === 0) {
         getNumber();
@@ -54,7 +53,7 @@ function getPrint(valueFinal) {
     $('.container__textResult').addClass('show');
     
     let changingPosition = result.slice(0).reverse();
-    const data = changingPosition.map((num) => {
+    let data = changingPosition.map((num) => {
         return `
             <li>
                 ${num}
