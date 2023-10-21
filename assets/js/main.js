@@ -16,6 +16,12 @@ function getNumber() {
     getRandom(finalNumber);
 }
 
+document.addEventListener("keydown", function(event) {
+    if (event.keyCode === 32 && finalNumber > 0) {
+        getNumber();
+    }
+});
+
 function removeContainer() {
     $('.container__box').addClass('hide');
     $('.raffleBtn').addClass('show');
