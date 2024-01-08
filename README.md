@@ -1,5 +1,5 @@
 
-# cardoso post
+# easy-drawer
 
 web application for simple random number draws.
 
